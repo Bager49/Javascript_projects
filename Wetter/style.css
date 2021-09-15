@@ -1,0 +1,199 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #79B4B7;
+}
+.wrapper{
+    width: 400px;
+    background:#F8F0DF ;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+.wrapper header{
+    color: #79B4B7;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 16px 15px;
+    display: flex;
+    align-items: center;
+    margin: 0px 20px;
+    text-align: center;
+    border-bottom: 1px solid #79B4B7;
+}
+header i{
+    font-size: 0px;
+    cursor: pointer;
+    margin-right: 80px;
+}
+header i:hover{
+    background: #79B4B7;
+    color: #FEFBF3;
+}
+.wrapper.active header i{
+    font-size: 30px;
+    margin-left: 5px;
+}
+.wrapper .input-part{
+    margin: 20px 20px 30px;
+}
+.wrapper.active .input-part{
+    display: none;/*kullanici sehri girip entera basinca burasi kyabolur asagida wrapper.active weather-part klasi görünür olur ve sonucu bize gösterir*/
+}
+.input-part .info-txt{
+    display: none;
+    color: #79B4B7;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.info-txt.error{
+    display: block;
+    color: #721c24;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 12px 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.info-txt.pending{
+    display: block;
+    color: #79B4B7;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    
+}
+.input-part :where(input, button){
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.input-part input{
+    border: 1px solid #bfbfbf;
+    text-align: center;
+}
+.input-part input:is(:focus, :valid){
+    border: 2px solid #79B4B7;
+}
+.input-part button{
+    background: #79B4B7;
+    cursor: pointer;
+    color: #FEFBF3;
+}
+.input-part .seperator{
+    height: 1px;
+    width: 100%;
+    margin: 25px 0;
+    background: #79B4B7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.seperator::before{
+    content: "or";
+    font-size: 20px;
+    padding: 0 15px;
+    background: #F8F0DF;
+    color: #bfbfbf;
+}
+
+/*alt kisim sicaklik nem ile ilgili bölüm*/
+.wrapper .weather-part{
+    margin: 30px 0 0;
+    display: none;/*burda gizledik kullanici entera basinca yani wrapper.active olunca gözükecek */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.wrapper.active .weather-part{
+    display: flex;
+}
+.weather-part img{
+    max-width: 120px;
+}
+.weather-part .temp{
+    font-size: 70px;
+    display: flex;
+    font-weight: 500;
+}
+.weather-part .temp .numb{
+    font-weight: 600;
+}
+.weather-part .temp .deg{
+    font-size: 40px;
+    margin: 5px 5px 0 0;
+    display: block;
+}
+.weather-part .weather{
+    font-size: 20px;
+    text-align: center;
+    margin: -5px 20px 15px;
+}
+.weather-part .location{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.location i{
+    font-size: 20px;
+    margin-right: 5px;
+
+}
+.weather-part .bottom-details{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #bfbfbf;
+}
+.bottom-details .column{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+
+}
+.column i{
+    font-size: 40px;
+    color: #43AFFC;
+}
+.column.humidity{
+    border-left: 1px solid #bfbfbf;
+
+}
+.details .temp, .humidity span{
+    font-size: 18px;
+    font-weight: 500;
+}
+.details .temp .deg{
+    margin: 0;
+    font-size: 15px;
+    padding: 0 2px 0 1px;
+}
+.details p{
+    font-size: 14px;
+    margin-top: -3px;
+}
