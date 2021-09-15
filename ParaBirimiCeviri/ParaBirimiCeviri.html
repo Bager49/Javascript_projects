@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /><!--hazir animasyonlar-->
+    <link rel="stylesheet" href="style.css">
+    <title>Währungsrechner</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>Währungsrechner</header>
+        <form action="#">
+            <div class="amount">
+                <p>Betrag</p>
+                <input type="text" value="1">
+            </div>
+            <div class="drop-list">
+                <div class="from">
+                    <p>Von</p>
+                    <div class="select-box">
+                        <img src="https://www.countryflags.io/us/flat/64.png" alt="flag"><!--io/us/flat surasi degisince mesela us yerine be belcika bayragi olur, flat yerine shiny yazilirsa o zaman bayragin goruntusu degisir-->
+                        <select name="" id="">
+                            <!--
+                                <option value="EU">EU</option>
+                                <option value="USD">USD</option>
+                                <option value="NPR">NPR</option>
+                                <option value="TL">TL</option>
+                            -->
+                        </select>
+                    </div>
+                </div>
+                <div class="icon"><i class="fa fa-exchange" aria-hidden="true"></i></div>
+                <div class="to">
+                    <p>Auf</p>
+                    <div class="select-box">
+                        <img src="https://www.countryflags.io/tr/flat/64.png" alt="flag"><!--io/us/flat surasi degisince mesela us yerine be belcika bayragi olur, flat yerine shiny yazilirsa o zaman bayragin goruntusu degisir-->
+                        <select name="" id="">
+                            <!--
+                                <option value="EU">EU</option>
+                                <option value="USD">USD</option>
+                                <option value="NPR">NPR</option>
+                                <option value="TL">TL</option>
+                            -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="exchange-rate">Wechselkurs bekommen... </div>
+            <button>Wechselkurs bekommen</button>
+
+        </form>
+    </div>
+    <script src="country-list.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
