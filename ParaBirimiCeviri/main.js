@@ -40,8 +40,7 @@ exchangeIcon.addEventListener("click", () =>{
     auf.value=tempCode;//auf da artik von vonu zatenen degiskene atamistik
     getExchangeRate();
     loadFlage(von);
-    loadFlage(auf);
-   
+    loadFlage(auf); 
 })
 function getExchangeRate(){
     const amount=document.querySelector(".amount input");
@@ -50,10 +49,11 @@ function getExchangeRate(){
         amount.value="1";
         amountVal=1;
     }
-    let url=`https://v6.exchangerate-api.com/v6/ff5caf6755ef13006589bbc5/latest/${von.value}`;
+    let url=`https://v6.exchangerate-api.com/v6/ff5caf6755ef13006589bbc5/latest/${von.value}`;//von.value hangi para birimi dönusecek
     fetch(url).then(cevap => ( cevap.json()))
     .then(result =>{
-        let exchangeRate=result.conversion_rates[auf.value];
+        console.log(result)
+        let exchangeRate=result.conversion_rates[auf.value];//hangi para birimine dönüsücekse onu burda degiskene atiyoruz zaten ne kadar degeri var json nesnesinin icinde belli
         let totalExchangeRate=(amountVal*exchangeRate).toFixed(2);//toFixed virgülden sonra kac rakam getirir onu
         let exchangeRateText=document.querySelector(".exchange-rate");
         exchangeRateText.textContent=` ${amountVal} ${von.value} =${totalExchangeRate} ${auf.value}`;
