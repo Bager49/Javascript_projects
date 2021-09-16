@@ -20,7 +20,7 @@ function requestApi(city){
 }
 localBtn.addEventListener("click", () => {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(onSuccess, onError);//eger basarili ise konum onsuccess i degilse on Error u calistir
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);//eger basarili ise konum onsuccess(onSuccess e tüm konum verileini json verisi olarak gönderir) i degilse on Error u calistir
     }else{
         alert("dein Browser not supported geolocation api");
     }
@@ -31,6 +31,7 @@ function onError(error){
     infoTxt.classList.add("error");
 }
 function onSuccess(position){
+    console.log(position)
     const {latitude, longitude}=position.coords//enlem ve boylam larini aldik kullanicinin
      api=`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&lang=de&appid=5ddd6c0a6cc14d41a138883b2e8abeeb`;
     fetchData();
@@ -54,7 +55,7 @@ function weatherDetails(info){
         infoTxt.innerHTML=`${inputField.value} ist nicht eine Stadt..`;
         inputField.value="";
     }else{ 
-        let stadt=info.name;
+        let stadt=info.name;//burdaki info JSOn adönusmus api verisi aslinda
         let land=info.sys.country;
         let situation=info.weather[0].description;
         let feuchtigkeit=info.main.humidity;
