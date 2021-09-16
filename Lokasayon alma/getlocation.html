@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Alma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button>Konumu AL</button>
+
+    <script>
+      let btn=document.querySelector("button");
+      btn.addEventListener("click", () =>{
+          if (navigator.geolocation) {
+              btn.innerText="Konum bilgileri aliniyor.."
+              navigator.geolocation.getCurrentPosition(onSuccess,onError);
+          }else{
+              btn.style.fontSize="20px";
+              btn.style.background="#A9E4D7"
+              btn.style.color="#4B3869"
+              btn.innerText="Tarayiciniz konum özelligini desteklemiyor.."
+            }
+        });
+        
+        function onSuccess(position){
+            //console.log(position)
+          btn.innerText="konumunuz algilaniliyor..."
+          let enlem=position.coords.latitude;
+          let boylam=position.coords.longitude;
+          let api=`https://api.opencagedata.com/geocode/v1/json?q=${enlem}+${boylam}&key=7c6f4f2b98fa46988871ba473be46eba`;
+          fetch(api)
+          .then(response =>response.json())
+         .then(result => {
+             //console.log(result)
+            let tum_konum_verileri=result.results[0].components;
+            let {country, city, postcode}=tum_konum_verileri;
+            btn.style.fontSize="30px";
+            btn.style.background="#A9E4D7"
+            btn.style.color="#4B3869"
+            btn.innerText=`${city} ${postcode}, ${country}`;
+            console.table(tum_konum_verileri)
+         });
+      }
+      function onError(error){
+             // console.log(error)
+              btn.style.fontSize="20px";
+              btn.style.background="#FFF8E5"
+              btn.style.color="#E05D5D"
+          if (error.code == 1) {
+              btn.innerText="Konum erisimine izin verilmedi.."
+            }
+            else if (error.code == 2){
+              btn.innerText="konum ulasilir degil"
+            }
+            else{
+              btn.innerText="biseyler ters gitti yeniden dene"
+          }
+      }
+    </script>
+</body>
+</html>
