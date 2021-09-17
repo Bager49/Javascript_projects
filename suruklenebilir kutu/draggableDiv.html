@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draggable Div</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>Draggable Div</header>
+        <div class="content">
+            <div class="icon"><i class="bi bi-arrows-move"></i></div>
+            <div class="title">Draggable Div</div>
+            <p>bu bir sürüklenebilir kutudur. Html ve Css kullanilirak olusturuldu. Bunu istedigin herhangi bhir yere tasiyabilirsin</p>
+        </div>
+    </div>
+
+    <script>
+        const wrapper=document.querySelector(".wrapper");
+        let header=document.querySelector(".icon");
+       
+        function onDrag({movementX,movementY}){
+            let getStyle=window.getComputedStyle(wrapper);
+            let left=parseInt(getStyle.left);
+            let top=parseInt(getStyle.top);
+            wrapper.style.left=`${left+movementX}px`;
+            wrapper.style.top=`${top+movementY}px`;
+            //console.log(movementX,movementY)
+        }
+
+    header.addEventListener("mouseup", () =>{
+        header.classList.add("active")
+        header.addEventListener("mousemove", onDrag);
+    })
+        
+    document.addEventListener("mousedown", () =>{
+        header.classList.remove("active")
+        header.addEventListener("mousemove", onDrag);
+    });
+        
+    </script>
+</body>
+</html>
