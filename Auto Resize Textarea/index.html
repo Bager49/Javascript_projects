@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Resize TextArea</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(#63B4B8, #664E88);
+    }
+    .wrapper{
+        width: 480px;
+        background: #A9E4D7;
+        border-radius: 5px ;
+        padding: 25px 25px 30px;
+
+    }
+    .wrapper h2{
+        font-size: 28px;
+        color: #664E88;
+        text-align: center;
+    }
+    .wrapper textarea{
+        width: 100%;
+        height: 60px;
+        outline: none;
+        border-radius: 5px;
+        padding: 15px;
+        resize: none;
+        font-size: 16px;
+        margin-top: 20px;
+        border-color: #4B3869;
+        max-height: 300px;
+    }
+    textarea:is(:focus, :valid){
+        border-color: #58b1b6;
+        border-width: 2px;
+        padding: 14px;
+    }
+    textarea::-webkit-scrollbar{
+        width: 0px;
+    }
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <h2>Auto Resize Textarea</h2>
+        <textarea  required placeholder="Screiben Sie bitte hier...."></textarea>
+    </div>
+
+    <script>
+        const textArea= document.querySelector('textarea');
+        textArea.addEventListener("keyup", (e) => {
+            textArea.style.height="60px";
+          let scHeight = e.target.scrollHeight;//scrollun yuksekligini al scroll css kodlarinda gizledigimiz icin gozukmez
+          console.log(scHeight)
+          textArea.style.height=`${scHeight}px`;//scroll yukseklugini height in degerine ata
+        })
+    </script>
+</body>
+</html>
