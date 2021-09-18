@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erkennt Benutzerbrowser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Browser: </h2>
+        <div class="logos">
+            <img class="chrome" src="logos/chrome.png" alt="chrome" title="Chrome">
+            <img class="opera" src="logos/opera.png" alt="opera">
+            <img class="firefox" src="logos/firefox.png" alt="firefox">
+            <img class="edge" src="logos/edge.png" alt="edge">
+        </div>
+    </div>
+
+    <script>
+        let userAgent = navigator.userAgent;
+        console.log(navigator);
+       console.log(userAgent+", browserin dili "+navigator.language)//navigator nesnesinin icinde tarayici ile bir sürü bilgi var bunlari istedgimiz gibi cekip kullanabiliriz
+       let browser;
+       if (userAgent.match(/edg/i)) {
+           browser="edge";
+       }
+       else if(userAgent.match(/firefox|fxios/i)){
+            browser="firefox";
+       }
+       else if(userAgent.match(/opr\//i)){
+            browser="opera";
+       }
+       else if(userAgent.match(/chrome|chromium|crios/i)){
+            browser="chrome";
+           
+       }
+       else{
+           alert("Sie haben ein andere Browser");
+       }
+       console.log(browser)
+
+       const logo = document.querySelector(`.logos .${browser}`);//template literaller ile böyle mantikii bir atama yapilabilir
+       if (logo) {
+           logo.style.opacity = "1";
+       }
+    </script>
+</body>
+</html>
