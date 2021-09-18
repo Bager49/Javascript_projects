@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "poppins", sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFC069;
+}
+form{
+    background: #ffffff;
+    width: 480px;
+    padding: 30px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+form header{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+    color: #FFC069;
+    margin-top: 10px;
+}
+form .url-input{
+    margin:30px;
+    
+}
+.url-input .title{
+    font-size: 20px;
+    color: #4A403A;
+}
+.url-input .field{
+    height: 50px;
+    width: 93%;
+    margin-top: 5px;
+    position: relative;
+}
+.url-input .field input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    padding: 0 15px;
+    font-family: 'Noto Sans', sans-serif;
+    background: #EFEFEF;
+    border-bottom: 1px solid #ccc;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+.url-input .field .bottom-line{
+    height: 2px;
+    width: 0;
+    background: #fdb653;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transform: scale(0);
+    transition: .5s ease all;
+}
+.url-input .field input:focus ~ .bottom-line,
+.url-input .field input:valid ~ .bottom-line
+{/*valid icinde deger varken value si dolu iken stil uygular focus ise sadece fokuslandiginda*/
+    transform: scale(1);
+    width: 110.8%;
+}
+
+form .preview-area{
+    height: 220px;
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px dashed #FFC069;
+    overflow: hidden;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+   /* background: #292928;*/
+}
+.preview-area.active{
+    border: none;
+}
+.preview-area .thumbnail{
+    width: 100%;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    display: none;
+}
+.preview-area.active .thumbnail{
+    display: block;
+}
+.preview-area .bi{
+    color: #fdb653;
+    font-size: 90px;
+}
+.preview-area span{
+    color: #fdb653;
+    margin-top: 25px;
+}
+.preview-area.active .bi,
+.preview-area.active span{
+    display: none;
+}
+
+form .download-btn{
+    height: 53px;
+    width: 100%;
+    background: #FFC069;
+    color: #4A403A;
+    font-size: 30px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin: 30px 0 20px 0;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
