@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top-bar">
+            <i class="bi bi-caret-down"></i>
+            <span>Now Playing</span>
+            <i class="bi bi-three-dots"></i>
+        </div>
+
+        <div class="img-area">
+            <img src="" alt="">
+        </div>
+
+        <div class="song-details">
+            <p class="name"></p>
+            <p class="artist"></p>
+        </div>
+
+        <div class="progress-area">
+            <div class="progress-bar">
+        </div>
+            <div class="timer">
+                <span class="current">0:00</span>
+                <span class="duration">3:20</span>
+            </div>
+            <audio id="main-audio" src=""></audio>
+        </div>
+
+        <div class="controls">
+            <i id="repeat-plist" class="bi bi-arrow-repeat" title="playList geloped"></i>
+            <i id="prev" class="bi bi-skip-start-fill"></i>
+            <div class="play-pause">
+                <i class="bi bi-play-fill"></i>
+            </div>
+            <i id="next" class="bi bi-skip-end-fill"></i>
+            <i id="more-music" class="bi bi-music-note-list"></i>
+        </div>
+
+        <div class="music-list">
+            <div class="header">
+                <div class="row">
+                    <i id="more-music" class="bi bi-music-note-list"></i>
+                    <span>Musik Liste</span>
+                </div>
+                <i id="close" class="bi bi-x"></i>
+            </div>
+        
+        <ul>
+            <!----
+                        <li>
+                <div class="row">
+                    <span>Ikson Anywhere - Ikson</span>
+                    <p>Audio Bibliothek</p>
+                </div>
+                <span class="audio-duration">3:55</span>
+            </li>
+            -->
+        </ul>
+    </div>
+    </div>
+
+
+
+
+    <script src="music-list.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
