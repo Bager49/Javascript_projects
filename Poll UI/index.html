@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>Poll UI Design   </header>
+            <div class="poll-area">
+                <label for="">
+                    <div class="row">
+                        <div class="column">
+                            <span class="circle"></span>
+                            <span class="text">HTML</span>
+                        </div>
+                        <span class="percent">90%</span>
+                    </div>
+                    <div class="progress" style="--w:90;"></div><!---css degiskeni atadik ona göre width degeri alacak-->
+                </label>
+                <label for="">
+                    <div class="row">
+                        <div class="column">
+                            <span class="circle"></span>
+                            <span class="text">Java</span>
+                        </div>
+                        <span class="percent">10%</span>
+                    </div>
+                    <div class="progress" style="--w:10;"></div>
+                </label>
+                <label for="">
+                    <div class="row">
+                        <div class="column">
+                            <span class="circle"></span>
+                            <span class="text">Python</span>
+                        </div>
+                        <span class="percent">10%</span>
+                    </div>
+                    <div class="progress" style="--w:10;"></div>
+                </label>
+                <label for="">
+                    <div class="row">
+                        <div class="column">
+                            <span class="circle"></span>
+                            <span class="text">JQuery</span>
+                        </div>
+                        <span class="percent">80%</span>
+                    </div>
+                    <div class="progress" style="--w:80;"></div>
+                </label>
+            </div>
+    </div>
+    <script>
+        const options = document.querySelectorAll("label");
+        let wrp = document.querySelector(".wrapper")
+        for (let i = 0; i < options.length; i++) {
+            options[i].addEventListener("click" , () => {
+                
+                for (let k = 0; k < options.length; k++) {
+                    if(options[k].classList.contains("selected")){
+                        options[k].classList.remove("selected");
+                    }
+                    
+                }
+                options[i].classList.add("selected");
+                wrp.classList.add("change");
+            });
+            
+        }
+    </script>
+</body>
+</html>
