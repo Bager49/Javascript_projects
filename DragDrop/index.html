@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag Drop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    <div class="drag-area">
+        <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+        <header>Tragen Sie hier Ihr Dokumente</header>
+        <span>ODER</span>
+        <button>Clicken Hier</button>
+        <input type="file" hidden>
+      </div>
+
+<script>
+    const dropArea = document.querySelector('.drag-area'),
+    dragText = dropArea.querySelector('header'),
+    button = dropArea.querySelector('button'),
+    input = dropArea.querySelector('input');
+    let file;
+
+    button.onclick = () => {
+        input.click();
+    };
+
+    input.addEventListener("change", () => {
+        file = this.files[0];//kullanici birden fazla resim secerse sadece ilk sectigini al
+        dropArea.classList.add("active");
+        showFile();
+        
+    });
+
+    dropArea.addEventListener("dragover" , (event) => {
+        event.preventDefault();
+        //console.log("dosya alanin ustunde");
+        dropArea.classList.add("active");
+        dragText.textContent="wird uploaded"
+    });
+    dropArea.addEventListener("dragleave" , () => {
+        //console.log("dosya alanin ustunde");
+        dropArea.classList.remove("active");
+        dragText.textContent="Tragen Sie Hier Ihr Dokumente";
+    });
+    dropArea.addEventListener("drop" , (event) => {
+       event.preventDefault();//baska bir sayfada attigimiz dosyayi acmasin diye
+        console.log("dosya alana birakildi");
+        file = event.dataTransfer.files[0];
+        showFile();
+    });
+
+    function showFile(params) {
+        let fileType = file.type;
+        console.log(file);
+        let validExtensions = ["image/jpeg","image/jpg","image/png"];// validextension ist gecerli_uzantilar
+        if (validExtensions.includes(fileType)) {
+               let fileReader = new FileReader();
+               console.log(fileReader);
+               fileReader.onload = () => {
+                   let fileUrl = fileReader.result;
+                   console.log(fileUrl);
+                   let imgTag = `<img src="${fileUrl} alt="">`;
+                   dropArea.innerHTML=imgTag;
+               }
+               fileReader.readAsDataURL(file);
+        }else{
+            alert("Das muss ein bild sein");   
+            dropArea.classList.remove("active");    
+
+        }
+    }
+</script>
+</body>
+</html>
