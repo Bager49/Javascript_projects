@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img  src="https://www.clipartmax.com/png/full/20-206538_cookie-free-icon-http-cookie.png" alt="Cookies">
+        <div class="content">
+            <header>Cookies Erlauben!!</header> 
+            <p>Cookies allow web applications to respond to you as an individual. The web application can tailor its operations to your needs, likes and dislikes by gathering and remembering information about your preferences. </p>
+            <div class="buttons">
+                <button class="item">Einverstanden</button>
+                <a href="#" class="item">Lern mehr</a>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const cookieBox = document.querySelector('.container');
+        let acceptBtn = document.querySelector(".buttons button");
+
+        acceptBtn.onclick = () => {
+            document.cookie = "Cerezler=GmbH; max-age="+10*1*24;
+            if (document.cookie) {
+                cookieBox.classList.add("hide");
+            }else{
+                alert("Cookie can't be set!");
+            }
+        };
+        let checkCookie = document.cookie.indexOf("Cerezler=GmbH");
+        checkCookie != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");
+    </script>
+</body>
+</html>
