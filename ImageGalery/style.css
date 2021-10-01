@@ -1,0 +1,135 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px;
+}
+.container{
+    max-width: 1100px;
+}
+.container .galerry{
+    display: flex;
+    flex-wrap: wrap;
+}
+.galerry span{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+.galerry .image{
+    width: calc(100% / 3);
+    padding: 5px;
+}
+.galerry .image img{
+    width: 100%;
+    vertical-align: middle;
+    transition: .4s all ease;
+    
+}
+.galerry .image:hover img{
+    transform: scale(1.1);
+
+}
+
+@media(max-width: 1000px){
+    .galerry .image{
+        width: calc(100% / 2);
+    }
+}
+@media(max-width: 600px){
+    .galerry .image{
+        width: 100%;
+        padding: 4px;
+    }
+}
+
+.preview-box{
+    background-color: #fff;
+    position: fixed;
+    max-width: 700px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    padding: 0 5px 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 3;
+}
+.preview-box.show{
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%) scale(1.1);
+    transition: all .4s ease;
+}
+.preview-box .details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px 12px 10px;
+}
+.preview-box .details .icon{
+    color: rgb(134, 6, 6);
+    cursor: pointer;
+    font-size: 40px;
+    transition:  .5s all ease-in-out;
+}
+.icon:hover{
+    transform:rotate(90deg);
+}
+.details .title{
+    display: flex;
+    font-size: 20px;
+    font-weight: 400;
+}
+.details .title p{
+    margin: 0 5px;
+}
+.details .title p.current-img{
+    font-weight: 600;
+}
+.preview-box .img-box{
+    display: flex;
+    width: 100%;
+}
+.img-box .slide{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    cursor: pointer;
+    color: #fff;
+    width: 60px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+.img-box .slide.prev{
+    left: 0;
+}
+.img-box .slide.next{
+    right: 0;
+}
+.preview-box .img-box img{
+    width: 100%;
+    border-radius: 0 0 3px 3px;
+}
+
+.shadow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+
