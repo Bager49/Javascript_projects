@@ -195,7 +195,7 @@ for (let i = 0; i < allMusic.length; i++) {
    // ulTag.innerHTML +=litag;
     ulTag.insertAdjacentHTML("beforeend", litag);
 
-    let liAudioDuration = ulTag.querySelector(`#${allMusic[i].src}`);//spana id ata
+    let liAudioDuration = ulTag.querySelector(`#${allMusic[i].src}`);//span id ata
     let liAudioTag = ulTag.querySelector(`.${allMusic[i].src}`);//audio ya class ata asagida kullanilacak surelerin hesaplanip sapana tekrar yazilmasi icin
    // console.log(liAudioTag);
     //console.log(liAudioDuration);

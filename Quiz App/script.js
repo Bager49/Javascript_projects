@@ -13,7 +13,7 @@ const timeOff = document.querySelector(".time_left_txt");
 start_btn.addEventListener("click", () => {
     info_box.classList.add("activeInfo");
     //start_btn.style.display="none";
-})
+});
 
 //Exit butonuna tiklandiginda
 exit_btn.addEventListener("click", () => {
@@ -110,8 +110,6 @@ function showQuestion(index) {
         option[i].setAttribute("onclick" , "optionSelected(this)")
         //console.log(option[i]);
     }
-    
-
 };
 
 let ticIcon = `<div class="icon tick"><i class="fas fa-check"></i></div>`;

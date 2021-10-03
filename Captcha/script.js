@@ -15,6 +15,7 @@ function character(){
     nummero[i]=String.fromCharCode(i+48);
     }
 } character();
+
 let allCharacters=upper.concat(lowwer,nummero.slice(0,10));
 console.log(allCharacters)
 
@@ -25,7 +26,7 @@ function getCaptcha(){
       let  randomChar=allCharacters[Math.floor(Math.random()*allCharacters.length)] 
         captcha.innerHTML +=`${randomChar}`;//aralarina bir bosluk birakmak icin matikli en basa bir bosluk
     }
-}
+}getCaptcha();
 
 reloadButton.addEventListener("click", ()=>{
     getCaptcha();

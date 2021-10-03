@@ -59,7 +59,7 @@ function getExchangeRate(){
         exchangeRateText.textContent=` ${amountVal} ${von.value} =${totalExchangeRate} ${auf.value}`;
        // console.log(totalExchangeRate);
     }).catch( () =>{
-        exchangeRateText.textContent="Etwas ist schief gegangen bitten versuchen Sie nochmal"
+        exchangeRateText.textContent="Etwas ist schief gegangen bitte versuchen Sie nochmal"
     });
 };
 

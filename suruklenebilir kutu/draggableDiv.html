@@ -24,6 +24,7 @@
        
         function onDrag({movementX,movementY}){
             let getStyle=window.getComputedStyle(wrapper);
+           // console.log(getStyle.left)
             let left=parseInt(getStyle.left);
             let top=parseInt(getStyle.top);
             wrapper.style.left=`${left+movementX}px`;
@@ -31,10 +32,7 @@
             //console.log(movementX,movementY)
         }
 
-    header.addEventListener("mouseup", () =>{
-        header.classList.add("active")
-        header.addEventListener("mousemove", onDrag);
-    })
+
         
     document.addEventListener("mousedown", () =>{
         header.classList.remove("active")
