@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImageEffekt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"  />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="images">
+            <div class="img-1"></div>
+            <div class="img-2"></div>
+            
+        </div>
+        <div class="slider">
+            <div class="drag-line">
+                <span></span>
+            </div>
+            <input type="range" max="100" value="70">
+            <h4>ürün satildi</h4>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="input-box">
+            <input type="text">
+        </div>
+        <div class="search-icon">
+            <i class="fa fa-search"></i>
+        </div>
+        <div class="close-icon">
+            <i class="fa fa-close"></i>
+        </div>
+    </div>
+
+    <script>
+        const slider =document.querySelector('.slider input');
+        const img =document.querySelector('.images .img-2');
+        const dragLine =document.querySelector('.slider .drag-line');
+        const h4 =document.querySelector('.slider h4');
+        slider.oninput = () => {
+            let sliderVal = slider.value;
+            dragLine.style.left =sliderVal+"%";
+            img.style.width =sliderVal+"%";
+            if(sliderVal <60){
+                h4.style.left =sliderVal-92+"%";
+            }else{
+                h4.style.left =sliderVal-70+"%";
+                
+            }
+        }
+    </script>
+</body>
+</html>
