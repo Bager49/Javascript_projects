@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Products</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" >
+
+</head>
+<body>
+     
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="image/logo.png" alt="logo" width="125px">
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <img src="image/cart.png" width="30px" height="30px" alt="">
+            <img src="image/menu.png" class="menu-icon" onclick="menutoggle();">
+        </div>    
+    </div>
+  
+<!-------------- sibgle product details----->
+
+<div class="small-container single-product">
+    <div class="row">
+        <div class="col-2">
+            <img src="image/gallery-1.jpg" id="ProductImg" width="100%">
+            <div class="small-img-row">
+                <div class="small-img-col">
+                    <img src="image/gallery-1.jpg" alt="" width="100%"  class="small-img">
+                </div>
+                <div class="small-img-col">
+                    <img src="image/gallery-2.jpg" alt="" width="100%"  class="small-img">
+                </div>
+                <div class="small-img-col">
+                    <img src="image/gallery-3.jpg" alt="" width="100%"  class="small-img">
+                </div>
+                <div class="small-img-col">
+                    <img src="image/gallery-4.jpg" alt="" width="100%"  class="small-img">
+                </div>
+                
+            </div>
+        </div>
+        <script>
+            var ProductImg=document.getElementById('ProductImg');
+            var SmallImg=document.getElementsByClassName("small-img");
+           
+            SmallImg[0].onclick=function()
+            {
+                ProductImg.src=SmallImg[0].src;
+            }
+            SmallImg[1].onclick=function()
+            {
+                ProductImg.src=SmallImg[1].src;
+            }
+            SmallImg[2].onclick=function()
+            {
+                ProductImg.src=SmallImg[2].src;
+            }
+            SmallImg[3].onclick=function()
+              {
+                ProductImg.src=SmallImg[03].src;
+            }
+        </script>
+        <div class="col-2">
+           <p>Home / T-shirt</p>
+           <h1>Red Printed T-shirt</h1>
+           <h4>$50.00</h4>
+           <select >
+               <option >select size</option>
+               <option >XXL</option>
+               <option >XL</option>
+               <option >L</option>
+               <option >M</option>
+               <option >S</option>
+           </select>
+           <input type="number" value="1">
+           <a href="" class="btn">Add To Cart</a>
+           <h3>Product Details <i class="fas fa-indent"></i></h3>
+           <br>
+           <p>jhshdagf jhasgdj fhadsf jksadj fgasdjfhjaks bcxnbm vjuuhsabdfjsdabh jfasbfj 
+               ahsdfj hasggdf jashdfg jasdgf jasgkjfg jasdgf, asjfhsajdf gjsakkf hjksdhf
+               sdhfg jas kfhas bcnxbyzuds hsddfh...
+           </p>
+        </div>
+        
+    </div>
+</div>
+<!--------------Title-------->
+
+<div class="small-container">
+    <div class="row row-2">
+    <h2>Related Products</h2>
+    <h3>View More</h3>
+    </div>
+</div>
+
+
+ <div class="small-container">
+    
+
+    <div class="row row-2">          
+     
+    <div class="row">
+       <div class="col-4">
+           <img src="image/product-9.jpg" alt="product">
+           <h4>red printed t-shirt</h4>
+           <div class="ratting">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star-half-alt"></i>
+               <i class="far fa-star"></i>
+               <i class="far fa-star"></i>
+         
+              </div>
+           <p>$50.00</p>
+       </div>
+       <div class="col-4">
+          <img src="image/product-10.jpg" alt="product">
+          <h4>red printed t-shirt</h4>
+          <div class="ratting">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <i class="far fa-star"></i>
+              
+             </div>
+          <p>$50.00</p>
+      </div>
+      <div class="col-4">
+          <img src="image/product-11.jpg" alt="product">
+          <h4>red printed t-shirt</h4>
+          <div class="ratting">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <i class="far fa-star"></i>
+              
+            </div>
+          <p>$50.00</p>
+      </div>
+      <div class="col-4">
+          <img src="image/product-12.jpg" alt="product">
+          <h4>red printed t-shirt</h4>
+          <div class="ratting">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <i class="far fa-star"></i>
+              
+             </div>
+          <p>$50.00</p>
+      </div>
+   </div>
+</div>
+
+  <!------------Footer --------->
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our APP</h3>
+                <p>hsakfj hksjha fksdh kfhas..</p>
+                <div class="app-logo">
+                    <img src="image/play-store.png" alt="">
+                    <img src="image/app-store.png" alt="">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="image/logo-white.png" alt="">
+                <p>hsakfj hksjha fksdh kfhasd dfgdsf
+                    dfgkdsfhk sdkhgkshdk gdsggg..</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>cupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Joinn</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>face</li>
+                    <li> Twitter</li>
+                    <li>Instagram </li>
+                    <li>Youtube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">copyright 2020 - Sevimli GMBH</p>
+    </div>
+</div>
+
+<!--- togle menu-->
+<script>
+    var MenuItems =document.getElementById("MenuItems");
+    MenuItems.style.maxHeight="0px";
+    function menutoggle(){
+        if(MenuItems.style.maxHeight =="0px")
+        {
+            MenuItems.style.maxHeight="200px";
+        }
+        else
+        {
+            MenuItems.style.maxHeight =="0px";
+        }
+    }
+</script>
+</body>
+</html>
