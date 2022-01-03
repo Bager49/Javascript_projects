@@ -1,0 +1,657 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    outline: 0;
+}
+body{
+    background: #222;
+}
+
+.kapsayici{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.wrapper
+{
+    padding:20px 30px;
+    background: #fff;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+    width: 500px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.wrapper .text{
+    font-size: 35px;
+    font-weight: 500;
+    text-align: center;
+}
+.wrapper p{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 20px;
+    
+}
+.wrapper .btns {
+    display: flex;
+    margin: 30px 0 20px 0;
+}
+
+.wrapper .btns a{
+    position: relative;
+    height: 60px;
+    background: #34dfe2;
+    width: 200px;
+    display: block;
+    margin: 0 20px;
+    text-decoration: none;
+    color: #fff;
+    line-height: 60px;
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    border-radius: 30px;
+   /* overflow: hidden;*/
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.5);
+}
+.wrapper .btns a  span{
+    background: red;
+    pointer-events: none;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    animation: baloncuk 0.6 linear infinite;
+}
+.wrapper .btns a:first-child{
+    background: linear-gradient(-90deg, #43efda, #45efd2, #089ea3);
+}
+.wrapper .btns a:last-child{
+    background: linear-gradient(90deg, #85e4a9, #23c258, #036629);
+}
+
+@keyframes baloncuk {
+    0%{
+        width: 0px;
+        height: 0px;
+        opacity: 0.5;
+    }
+   100%{
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
+
+/*Password Stronger*/
+.container{
+    width: 420px;
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+}
+.container header{
+    font-size: 24px;
+    font-weight:600;
+    line-height: 33px;
+}
+.container form{
+    margin:  20px 5px 10px 5px;
+
+}
+.container form .field{
+    height: 45px;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.container form .field input{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgreen;
+    padding-left: 15px;
+    outline: none;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.container form .field input:focus{
+    border-color: #27a360;
+    box-shadow: inset 0 0 3px #2fd072;
+}
+.container form .field .showBtn{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    display: none;
+}
+.container form .indicator{
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    display:none;
+}
+.container form .indicator span{
+    width: 100%;
+    height: 100%;
+    background: lightgrey;
+    border-radius: 5px;
+    position: relative;
+}
+form .indicator span.medium{
+    margin: 0 3px;
+
+}
+.container form .indicator span::before{
+    content: '';
+    position: absolute;
+    /*background: rgb(255, 0, 0);*/
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+}
+.container form .indicator span.active.weak::before{
+    background: rgb(207, 113, 113);
+}
+.container form .indicator span.active.medium::before{
+    background: rgb(235, 173, 39);
+}
+form .indicator span.active.strong::before{
+    background: rgb(150, 243, 127);
+}
+.container form .textt{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: -10px;
+    text-align: center;
+    display:none;
+}
+.container form .textt.weak{
+    color: rgb(207, 113, 113);
+}
+.container form .textt.medium{
+    color: rgb(235, 173, 39);
+}
+.container form .textt.strong{
+    color: rgb(150, 243, 127);
+}
+
+@media screen and (max-width: 860px) {
+    .kapsayici{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .wrapper{
+        margin-bottom: 30px;
+    }
+    .container{
+        margin-bottom: 10px;
+    }
+}
+
+/*------Carousel Card ------------------*/
+.slider{
+    max-width: 1150px;
+    display: flex;
+}
+.slider .card{
+    background: #fff;
+    flex: 1;
+    margin: 0 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.slider .card .img{
+    height: 200px;
+    width: 100%;
+
+}
+.slider .card .img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+.slider .card .content{
+    padding: 10px 20px;
+}
+.slider .card .content .title{
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+}
+.slider .card .content .sub-title{
+    font-size: 20px;
+    font-weight: 600;
+    color: #089ea3;
+    line-height: 20px;
+    text-align: center;
+}
+.card .content p{
+    text-align: justify;
+    margin: 10px 0;
+}
+.card .content .btn {
+    display: block;
+    text-align: left;
+    margin: 10px 0;
+}
+.card .content .btn button {
+
+    background: #fff;
+    color: #089ea3;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all .8s ease;
+    opacity: .7;
+    transform: scale(.9);
+}
+.card .content .btn button:hover {
+    background: #089ea3;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #089ea3;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 1;
+    transform: scale(1);
+    letter-spacing: 2px;
+}
+
+
+/*---- Confirm Password*/
+.container-2{
+    background: #fff;
+    padding: 20px 30px;
+    width: 420px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+}
+.container-2 header{
+    padding: 5px;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+}
+.container-2 form{
+    margin: 5px 8px;
+
+}
+.container-2 form .error-text{
+    background: #f8d7da;
+    padding: 8px 0;
+    color: #8b3e46;
+    border-radius: 4px;
+    border: 1px solid #f5c6cb;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    display: none;
+}
+.container-2 form .error-text.passed{
+    background: #27a360;
+    color: rgb(255, 255, 255);
+    border: 1px solid #27ea60;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: block;
+}
+.container-2 form .field{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    margin: 15px 0px;
+    position: relative;
+}
+
+.container-2 form input{
+    width: 100%;
+    height: 100%;
+    border: 1px solid lightgrey;
+    padding-left: 15px;
+    outline: none;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: all .3s ease;
+}
+.container-2 form input:focus{
+    border-color: #27ea60;
+    box-shadow:inset 0 0 3px #2fd070;/*iceriye golge vermek icin kullanilir*/
+}
+.container-2 form .field .show{
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    font-weight: 600;
+    user-select: none;
+    cursor: pointer;
+    display: none;
+}
+
+.container-2 form button{
+    width: 100%;
+    height: 45px;
+    outline: none;
+    border:none;
+    margin: 3px 0px 10px 0px ;
+    border-radius: 4px;
+    background: #27a360;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: no-drop;
+    opacity: .7;
+    transition: all ease-in-out .5s;
+}
+.container-2 form button.active{
+    opacity: 1;
+    cursor: pointer;
+    transition: all ease-in-out .5s;
+}
+.container-2 form button.active:hover{
+    background: #219150;
+    transform: scale(0.98);
+}
+
+/*--------------------- Upload Img  App --------------------*/
+.container-3{
+    width: 25%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    position: relative;
+    transition: all ease-in-out .6s;
+}
+.container-3  .upload-field{
+    width: 100%;
+    height: 400px;
+    border: 2px dotted red;
+    background: #fff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transition: all ease .5s;
+}
+.container-3 .upload-field:hover  .img-name.active{
+    display: block;
+}
+.container-3 .upload-field:hover  .close-icon.active{
+    display: block;
+}
+.container-3 .upload-field .img-div{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+}
+.container-3 .upload-field .upload-icon i{
+    color: royalblue;
+    font-size: 90px;
+    z-index: 55;
+}
+.container-3 .upload-field .upload-txt{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    margin-top: 20px;
+}
+.container-3 .upload-field .img-div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container-3 .upload-field .close-icon{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 20px;
+    color: linear-gradient(270deg, #45ef32,#324fde);
+    cursor: pointer;
+    display: none;
+    transition: all .5s ease-in-out;
+}
+.upload-field .close-icon:hover{
+    color: #8b3e46;
+    transform: scale(1.3);
+    transform: rotate(90deg);
+}
+.container-3 .upload-field .img-name{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(270deg, #45ef32,#324fde);
+    color: #fff;
+    width:100%;
+    height: 30px;
+    border-radius: 2px;
+    text-align: center;
+    padding: 5px 0px;
+    font-size: 19px;
+    display: none;
+    transition: all ease .5s;
+}
+
+
+.container-3 #upload-btn{
+    width: 54.5%;
+    height: 40px;
+    border-radius: 20px;
+    margin:10px 10px;
+    border: none;
+    text-transform: uppercase;
+    background: linear-gradient(270deg, #45ef32,#324fde);
+    transition: all 1s ease;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+}
+.container-3 #upload-btn:hover{
+
+    background: linear-gradient(270deg, #324fde,#45ef32);
+    transform: scale(.95);
+}
+
+
+/**-------user Contact ---------*/
+.container-3{
+    width: 390px;
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+    padding: 50px 35px 10px 35px;
+}
+.container-3 header{
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.container-3 .form-outer{
+    width: 100%;
+     overflow: hidden; 
+}
+
+.container-3 .form-outer .form{
+    display: flex;
+    width: 400%;
+}
+.container-3 .form-outer .form .page{
+    width: 25%;
+    transition: all ease .7s;
+}
+.container-3 .form-outer .form .page .title{
+    text-align: left;
+    font-size: 25px;
+    font-weight: 500;
+}
+.container-3 .form-outer .form .page .field{
+    height: 45px;
+    width: 330px;
+    margin: 45px 0px;
+    position: relative;
+    display: flex;
+}
+.container-3 .form-outer .form .page .field .label{
+    position: absolute;
+    top: -30px;
+    font-weight: 500;
+}
+.container-3 .form-outer .form .page .field input{
+    height: 100%;
+    width: 95%;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+.container-3 .form-outer .form .page .field select{
+    width: 96%;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+}
+.container-3 .form-outer .form .page .field button{
+    width: 95%;
+    height: calc(100% + 5px);
+    margin-top: -20px;
+    border: none;
+    border-radius: 5px;
+    background: #324fde;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all ease .6s;
+}
+.container-3 .form-outer .form .page .field button:hover{
+    background: #27a360;
+}
+.container-3 .form-outer .form .page .btns button{
+    margin-top: -20px!important;
+}
+.container-3 .form-outer .form .page .btns button.prev{
+    margin-right: 1px;
+    font-size: 19px;
+}
+.container-3 .form-outer .form .page .btns button.next{
+    margin-left: 5px;
+    font-size: 19px;
+}
+
+.container-3 .progress-bar{
+    display: flex;
+    margin: 40px 0;
+}
+.container-3 .progress-bar .step{
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+.container-3 .progress-bar .step p{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 7px;
+    color: #000;
+    transition: all .7s ease;
+    margin-left: 8px;
+}
+.container-3 .progress-bar .step p:not(:first-child){
+    margin-left: 0px;
+}
+.container-3 .progress-bar .step p.active{
+    color: #23c258;
+}
+.container-3 .progress-bar .step .bullet{
+    width: 25px;
+    height: 25px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    transition: all .7s ease-in-out;
+}
+.container-3 .progress-bar .step .bullet.active{
+    border-color: #34dfe2;
+    background: #23c258;
+}
+.container-3 .progress-bar .step:last-child .bullet::before,
+.container-3 .progress-bar .step:last-child .bullet::after{
+    display: none;
+}
+.container-3 .progress-bar .step .bullet::before,
+.container-3 .progress-bar .step .bullet::after{
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 4px;
+    background: #000;
+    bottom: 8px;
+    right: -38px;
+}
+.container-3 .progress-bar .step .bullet.active::after{
+    background: #324fde;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate .3s infinite forwards;
+}
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+.container-3 .progress-bar .step .bullet span{
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.progress-bar .step .bullet span.active{
+    display: none;
+}
+.container-3 .progress-bar .step .check{
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    transition: ease all .7s;
+}
+.progress-bar .step .check.active{
+    display: block;
+    color: #fff;
+}
