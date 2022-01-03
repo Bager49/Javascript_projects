@@ -1,0 +1,445 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.a{
+    margin-bottom: 10px;
+}
+/*  ############  Navıgatıon  ############# */
+#nav-bar{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.navbar-brand img{/* logo ıcın*/
+    height: 40px;
+    padding-left: 30px;
+}
+.navbar-nav li{
+    padding: 0 10px;
+}
+.navbar-nav li a{
+    float: right;
+    text-align: left;
+}
+#nav-bar ul li a:hover{
+    color: #007bff!important;
+
+}
+.navbar{
+    background-color:#fff ;
+}
+.navbar-toggler{
+    border: none!important;
+}
+.nav-link{
+    color: #555!important; 
+    font-weight: 600px;
+    font-size: 16px;
+}
+/* $$$$$$$ slider $$$$$$$$*/
+
+#slider{
+    width: 100%;
+    height: 100%;
+}
+.carousel-caption{/*foto uzerindeki yazilar*/
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial !important;
+ 
+}
+.yana-al{
+    left: 13%;
+    transform: translateX(13%);
+}
+.carousel-item h5{
+    color: rgb(255, 255, 255);
+    font-size: 42px;
+}
+
+/* ################### About ##################  */
+#about{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #555;
+   
+}
+#about .btn{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.about-content{
+    padding-top: 20px;
+
+}
+.skills-bar{
+    margin-bottom: 6px;
+    font-weight: 600px;
+}
+.progress-bar{
+    border-radius: 16px;
+}
+.progress{
+    border-radius: 16px !important;
+    margin-bottom: 20px;
+}
+/*######## services ########*/
+#services{
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(services.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #efefef !important;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+#services h1{
+    text-align: center;
+    color: #efefef !important;
+    padding-bottom: 10px;
+}
+#services h1::after{
+    content: '';
+    background: #efefef;
+    display: block;
+    height: 3px;
+    width: 170px;
+    margin: 20px auto 5px;
+}
+.services{
+    margin-top: 40px;
+}
+.icon{
+    font-size: 40px;
+    margin: 10px auto;
+    padding: 10px;
+    height: 80px;
+    width: 80px;
+    border: 1px solid #efefef;
+    border-radius: 50%;
+}
+#services p{
+    font-size: 14px;
+    margin-top: 20px;
+    color: #ccc;
+}
+.services .col-md-3:hover{
+    background: #007bff;
+    border-radius: 20%;
+    cursor: pointer;
+    transition: .6s;
+}
+/*############## Team Members $#################*/
+
+#team{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #555 !important;
+   
+}
+h1{
+    text-align: center;
+    color: #555 !important;
+    padding-bottom: 10px;
+}
+
+h1::after{
+    content: '';
+    background: #007bff;
+    display: block;
+    height: 3px;
+    width: 170px;
+    margin: 20px auto 5px;
+
+}
+.profile-pic{
+    margin-top: 25px;
+
+}
+.profile-pic .img-box{
+    opacity: 1;
+    display: block;
+    position: relative;
+}
+.profile-pic .img-box img{
+    filter: grayscale(1);
+    border-radius: 10%;
+    
+}
+.profile-pic .img-box img:hover{
+    filter: grayscale(0);
+    cursor: pointer;
+ }
+.profile-pic h2{
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #007bff !important;
+
+}
+.profile-pic h3{
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+#team .fab{
+    height: 25px;
+    width: 25px;
+    color: #007bff !important;
+    background-color: #fff;
+    padding: 4px;
+    border-radius: 50%;
+
+}
+.img-box ul{
+    padding: 15px 0;
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    
+}
+.img-box ul li{
+    padding: 5px;
+    display: inline-block;
+}
+.img-box:hover ul{
+    
+    opacity: 1;
+}
+.img-box ul , .img-box ul li{
+    transition: .7s;
+}
+/* ------------------- Promo -------------------------*/
+#promo{
+    background-image: linear-gradient(rgba(32, 32, 32, 0.2),rgba(37, 37, 37, 0.2)),url(promo.png);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    background-attachment: fixed;
+    text-align: center;
+    padding: 100px;
+    font-family: sans-serif;
+    font-size: 38px;
+    
+}
+
+/*--------------- Price plans ---------------*/
+#preis{
+    padding: 40px 0;
+    background-color: #efefef;
+
+}
+.single-price{
+    margin: 10px auto;
+    display: inline;
+    background-color: #fff;
+    float: left;
+    width: 100%;
+    transition: .5s;
+}
+.single-price:hover{
+    box-shadow: 0 2px 20px #333;
+    /*cursor: pointer;*/
+}
+.price-head{
+    background-color: #2196f3;
+    display: inline;
+    float: left;
+    padding: 10px 5px;
+    text-align: center;
+    width: 100%;
+}
+.price-head h2{
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.price-head p{
+    font-size: 25px;
+    color: #ccc;
+    font-weight: bold;
+    line-height: 30px;
+}
+#preis span{
+    font-size: 15px;
+}
+.price-contnent{
+    display: inline;
+    float: left;
+    width: 100%;
+    padding: 0 15px;
+}
+.price-contnent ul li{
+    border-bottom: 1px solid #efefef;
+    padding: 15px 10px;
+    list-style: none;
+}
+.price-contnent ul li:last-child{
+    border-bottom: none;
+}
+.price-contnent .fa-check-circle{
+    color: rgb(5, 235, 5);
+    margin-right: 10px;
+    font-size: 20px;
+
+}
+.price-contnent .fa-times-circle{
+    color: red;
+    margin-right: 12px;
+    font-size: 20px;
+    
+}
+.price-button{
+    display: inline;
+    float: left;
+    padding: 15px 15px 30px;
+    text-align: center;
+    width: 100%;
+}
+.buy-btn{
+    background-color: #2196f3;
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 18px;
+    padding: 15px 50px;
+    transition: 0.5s;
+}
+.buy-btn:hover{
+    border-color: 1px #fff ;
+    background-color: #3f51b5;
+
+}
+a{
+    text-decoration: none !important;
+    color: #fff !important;
+}
+/*-------------------- Testimonials----------------*/
+#testimonials{
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+#testimonials .row
+{
+    margin-top: 30px;
+}
+.col-md-4{
+    margin: 40px auto;
+}
+.profile{
+    padding: 70px 10px 10px;
+    background-color: #efefef;
+}
+.user{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+.profile img{
+    top: -60px;
+    position: absolute;
+    left: calc(50%-60px);
+    border: 10px solid #fff;
+}
+.profile h3{
+    font-size: 20px;
+    margin-top: 15px;
+    color: #007bff;
+}
+#testimonials span
+{
+    font-size: 12px;
+    color: #333;
+
+}
+blockquote{
+    font-size: 16px;
+    line-height: 30px;
+}
+blockquote::before{
+    content: '\93';
+    font-size: 50px;
+    color: #007bff;
+    position: relative;
+    line-height: 20px;
+    bottom:-15px;
+    right: 5px;
+
+}
+blockquote::after{
+    content: '\94';
+    font-size: 50px;
+    color: #007bff;
+    position: relative;
+    line-height: 10px;
+    bottom:-15px;
+    right: 5px;
+
+}
+.profile:hover
+{
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0,0.4);
+    cursor: pointer;
+    margin-top: -5px;
+    transition: .6s;
+}
+/*+++++++++++++++++++   contact   ^^^^^^^^^^^^^^^^^^*/
+#contact{
+    background-color: #efefef;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: #777;
+}
+
+.contact-form
+{
+    padding: 15px;
+}
+.form-control{
+    border: none !important;
+    border-radius: 0 !important;
+}
+::placeholder{
+    color: #999 !important;
+}
+.follow{
+    background-color: #fff;
+    padding: 2px 10px;
+    margin: 15px;
+    display: block;
+    width: 350px;
+    height: 40px;
+}
+.de{
+    height: 80px;
+}
+.contact-info .fas{
+    margin: 15px 10px;
+    color: #007bff;
+    font-weight: bold;
+
+}
+.contact-info .fab{
+    color: red;
+    font-size: 16px;
+    margin-left: 25px;
+    padding: 3px 10px; 
+}
+
+/*############ footer######  */
+#footer
+{
+    background-color: #333;
+    color: #fff;
+    padding: 12px;
+}
+.fa-copyright{
+    margin: 3px;
+    color: red;
+}
