@@ -1,0 +1,245 @@
+body {
+    height: 4000px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container1 {
+    background: rgb(218, 214, 214);
+    border: 2px solid black;
+    min-width: 500px;
+    min-height: 450px;
+}
+
+
+button {
+    background-color: dimgray;
+    color: white;
+    margin: 5px;
+    width: 40px;
+
+}
+
+#olustur {
+    width: 60px;
+    background-color: brown;
+}
+
+input {
+    width: 205px;
+    border: 2px solid black;
+    color: black;
+}
+
+table,
+td {
+    margin: 5px;
+}
+
+fieldset {
+    box-shadow: gray 2px 4px 5px;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    border: 2px solid black;
+}
+
+#gizle-goster {
+    margin: 5px 2px;
+    width: 284px;
+    background-color: brown;
+    font-size: 15px;
+}
+
+.gecis {
+    display: none;
+}
+
+/*-----------------------------yukari cik uygulamasi----------------------*/
+#yukarii {
+    height: 50px;
+    width: 80px;
+    border-radius: 50%;
+    text-align: center;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding-top: 30px;
+    background-color: burlywood;
+    color: white;
+
+}
+
+#yukarii:hover {
+    background-color: tomato;
+    color: #000;
+    cursor: pointer;
+}
+
+.goster {
+    display: block;
+}
+
+.gizle {
+    display: none;
+}
+
+/*---------------------------Mouse Takip goz------------------------------------*/
+.gozler {
+    position: fixed;
+    top: 1px;
+    left: 10px;
+    width: 100%;
+}
+
+.goz {
+    width: 120px;
+    height: 60px;
+    background: skyblue;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    border-top: 60px solid black;
+    transition: all .5s ease;
+}
+
+.goz:hover {
+    border-top: 10px solid black;
+}
+
+.goz-bebek {
+    background: black;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    border: 7px solid grey;
+}
+
+/*--------------------------TAS KAGIT MAKAS---------------------------------*/
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: chocolate;
+    border: 2px solid black;
+    min-width: 500px;
+    min-height: 450px;
+    margin-left: 20px;
+}
+
+h2 {
+    margin-top: 20px;
+    font-size: 50px;
+}
+
+.tabela {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 5px;
+    border: 3px solid maroon;
+    color: white;
+}
+
+.oyuncu_tabela,
+.bilgisayar_tabela {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+span {
+    margin-bottom: 15px;
+    color: maroon;
+}
+
+.kutu {
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    line-height: 100px;
+    text-align: center;
+    font-size: 40px;
+    border-radius: 100px;
+    background-color: white;
+}
+
+.secim {
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+img {
+    cursor: pointer;
+    height: 100px;
+    width: 100px;
+    transition: all .5s ease;
+}
+
+img:hover {
+    transform: scale(2);
+    /* border: 1px solid maroon;
+    border-radius: 5px; */
+}
+
+.secimler {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    margin-top: 40px;
+    font-family: 'Roboto'cursive;
+    font-size: 30px;
+}
+
+.oyuncu_secim,
+.bilgisayar_secim {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.oyuncu_secim span,
+.bilgisayar_secim span {
+    text-decoration: underline;
+}
+
+.mesaj {
+    height: 50px;
+    width: 450px;
+    border: 2px solid maroon;
+    margin-top: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+}
+
+.reset {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(247, 4, 4);
+    color: rgb(255, 255, 255);
+    letter-spacing: 4px;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+}

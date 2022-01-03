@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stein-Scher-Pappier-MouseFolge</title>
+  <link rel="stylesheet" href="stil.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@700&family=Merriweather:wght@300&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!----------------------------------------Div Maunipulation-------------------------------------------->
+  <div class="wrapper">
+
+    <div class="container1">
+      <h1>Javascript DOM Manipulation</h1>
+      <div class="container" id="container">
+        <div class="sol">
+          <table cellpadding="10px" cellspacing="5px">
+            <tr>
+              <td>Div Width</td>
+              <td><input type="text" id="genislik" /></td>
+            </tr>
+            <tr>
+              <td>Div Height</td>
+              <td><input type="text" id="yukseklik" /></td>
+            </tr>
+            <tr>
+              <td>Div Color</td>
+              <td>
+                <select name="" id="arka_renk">
+                  <option value="red">Rot</option>
+                  <option value="blue">Blaue</option>
+                  <option value="black">Schwarz</option>
+                  <option value="brown">Brown</option>
+                  <option value="green">Grün</option>
+                  <option value="white">Weiß</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Border</td>
+              <td>
+                <select name="" id="kalinlik">
+                  <option value="2px">2px</option>
+                  <option value="3px">3px</option>
+                  <option value="5px">5px</option>
+                  <option value="10px">10px</option>
+                  <option value="15px">15px</option>
+                </select>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Border Style</td>
+              <td>
+                <select name="" id="tip">
+                  <option value="solid">Normal</option>
+                  <option value="dotted">Dashed</option>
+                  <option value="dashed">Dotted</option>
+                </select>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Border Color</td>
+              <td>
+                <select name="" id="cerceve_renk">
+                  <option value="red">Rot</option>
+                  <option value="blue">Blaue</option>
+                  <option value="black">Schwarz</option>
+                  <option value="brown">Brown</option>
+                  <option value="green">Grün</option>
+                  <option value="white">Weiß</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Margin</td>
+              <td><input type="text" id="dis_bosluk" /></td>
+            </tr>
+            <tr>
+              <td>Padding</td>
+              <td><input type="text" id="ic_bosluk" /></td>
+            </tr>
+            <tr>
+              <td>Rotate</td>
+              <td><input type="text" id="rotate" /></td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <button type="submit" id="olustur">Create</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <div id="yukarii">TOP</div>
+
+
+    <!-------------------------- Stein - Schere - Papier ---------------------------------------->
+
+    <div class="container2">
+      <h2>SKORBOARD</h2>
+      <div class="tabela">
+        <div class="oyuncu_tabela">
+          <span>DU</span>
+          <div style="color: black;" class="kutu oyuncu_skor">0</div>
+        </div>
+        <p style="font-size: 32px; color: brown;">VS</p>
+        <div class="bilgisayar_tabela">
+          <span> COMPUTER</span>
+          <div style="color: black;" class="kutu bilgisayar_skor">0</div>
+        </div>
+      </div>
+      <div class="secim">
+        <img id="tas" src="images/tas.png" alt="" title="TAS">
+        <img id="kagit" src="images/kagit.png" title="KAĞIT" alt="">
+        <img id="makas" src="images/makas.png" title="MAKAS" alt="">
+      </div>
+      <div class="secimler">
+        <div class="oyuncu_secim">
+          <span>DU</span>
+          <img id="oyuncu_secimi" src="images/soru.png" alt="">
+        </div>
+        <div class="bilgisayar_secim">
+          <span>Computer</span>
+          <img id="bilgisayar_secimi" src="images/soru.png" alt="">
+        </div>
+      </div>
+      <div class="mesaj">
+
+      </div>
+      <button type="button" class="reset" onclick="reset();">Reset</button>
+    </div>
+
+
+
+  </div>
+
+  <!----------Mouse Takip eden gozler-------------------------->
+  <div class="gozler">
+    <div class="goz">
+      <div class="goz-bebek"></div>
+    </div>
+    <div class="goz">
+      <div class="goz-bebek"></div>
+    </div>
+  </div>
+  <!---------------------Mouse Takip eden gozler End-------------------------------------------->
+
+
+
+
+
+  <script src="costum.js"></script>
+</body>
+
+</html>
