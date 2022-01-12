@@ -3,7 +3,7 @@ in diesem Repository finden Sie nicht nur kleine Projekten, die Sie in Ihren eig
 #### Persönliche Webseite
 #### Ecommerce
 #### WetterApp
-*mit Fetch API wurde entwickelt**
+*mit `Fetch API` wurde entwickelt**
 #### MusicPlayer
 #### Pagination
 #### QuizApp
